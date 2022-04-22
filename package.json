@@ -1,0 +1,26 @@
+{
+  "name": "gulp",
+  "version": "1.0.0",
+  "description": "gulp setting",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp dev",
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wjdrnrgh/gulp.git"
+  },
+  "author": "Jung Guk Ho <96612912+wjdrnrgh@users.noreply.github.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wjdrnrgh/gulp/issues"
+  },
+  "homepage": "https://github.com/wjdrnrgh/gulp#readme",
+  "dependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/register": "^7.17.7",
+    "gulp": "^4.0.2"
+  }
+}
