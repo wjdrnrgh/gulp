@@ -37,7 +37,7 @@ const routes = {
 
 //--prepare--//
 const clean = async () => {
-  await del(["build", ".publish"]);
+  await del(["build"]);
 };
 
 //--assets--//
@@ -92,8 +92,8 @@ const watch = () => {
 };
 
 //--deploy--//
-const deployment = () => {
-  gulp.src("build/**/*").pipe(ghpage());
+const deployment = async () => {
+  await gulp.src("build/**/*").pipe(ghpage());
 };
 
 const prepare = gulp.series([clean]);
@@ -102,4 +102,4 @@ const liveServer = gulp.parallel([devserver, watch]);
 
 export const build = gulp.series([prepare, assets]);
 export const dev = gulp.series([build, liveServer]);
-export const deploy = gulp.series([build, deployment, clean]);
+export const deploy = gulp.series([build, deployment]);
